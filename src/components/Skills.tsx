@@ -25,17 +25,17 @@ export default function Skills() {
     <section id="skills" className="py-24 bg-[#020617] overflow-hidden">
       
       {/* 1. HEADER: Clean and minimal */}
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl  mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-            Technical Stack
+          <h2 className="projects-heading text-4xl md:text-5xl text-left ml-4 font-bold text-white tracking-tight">
+           <span>Technical</span> Stack
           </h2>
-          <div className="w-20 h-1.5 bg-blue-600 rounded-full" />
+          
         </motion.div>
       </div>
 
@@ -45,8 +45,8 @@ export default function Skills() {
       {/* 3. MARQUEE: The Floating Icon Row */}
       <div className="relative flex items-center">
         {/* Side Blurs */}
-        <div className="absolute left-0 z-20 w-24 md:w-48 h-full bg-gradient-to-r from-[#020617] to-transparent pointer-events-none" />
-        <div className="absolute right-0 z-20 w-24 md:w-48 h-full bg-gradient-to-l from-[#020617] to-transparent pointer-events-none" />
+        <div className="absolute left-0 z-20 w-24 md:w-48 h-full bg-linear-to-r from-[#020617] to-transparent pointer-events-none" />
+        <div className="absolute right-0 z-20 w-24 md:w-48 h-full bg-linear-to-l from-[#020617] to-transparent pointer-events-none" />
 
         <motion.div
           className="flex gap-10 items-center whitespace-nowrap"
@@ -65,7 +65,7 @@ export default function Skills() {
           {[...skillsData, ...skillsData].map((skill, index) => (
             <div
               key={index}
-              className="flex items-center gap-6 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group hover:border-blue-500/50 hover:bg-white/10 transition-all duration-300"
+              className="flex items-center gap-6 px-8 py-5  backdrop-blur-sm group hover:border-blue-500/50 hover:bg-white/10 transition-all duration-300"
             >
               <span className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110">
                 {skill.icon}

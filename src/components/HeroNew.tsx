@@ -14,9 +14,9 @@ export default function Hero() {
     <section
       id="about"
       className="relative min-h-[85vh]
- flex items-center justify-center px-6 pt-20 sm:px-8 overflow-hidden"
+ flex items-center justify-center px-6   sm:px-8 overflow-hidden"
     >
-      <div className="max-w-5xl w-full mx-auto z-10">
+      <div className="max-w-5xl w-full sm:ml-3 mx-auto z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           
           {/* Left: Text Content */}
@@ -24,9 +24,10 @@ export default function Hero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-          >
+          > <div className="space-y-2 py-4 justify-between md:text-left">
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-4 text-white tracking-tight"
+            
+              className="text-3xl  sm:text-2xl md:text-2xl  font-bold mb-4 sm:ml-3 text-white tracking-tight"
             >
               <Typewriter text="Hasan Ekkeri" speed={50} />
             </motion.h1>
@@ -39,9 +40,9 @@ export default function Hero() {
             >
               Backend Developer
             </motion.div>
-
+            
             <motion.p
-              className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-lg"
+              className="text-lg ml-2 mr-2 md:text-xl text-slate-300 mb-10 leading-relaxed max-w-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
@@ -50,7 +51,7 @@ export default function Hero() {
               with a focus on database design, system architecture, and
               information security.
             </motion.p>
-
+            </div>
             <motion.div
               className="flex gap-5 flex-wrap"
               initial={{ opacity: 0, y: 20 }}
@@ -84,21 +85,21 @@ export default function Hero() {
             className="relative flex justify-center items-center group"
           >
             {/* The "Glow Base" Circle */}
-            <div className="absolute w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-b from-blue-600/20 to-transparent blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
+            <div className="absolute w-17.5 h-17.5 md:w-23.5 md:h-95 rounded-full bg-linear-to-b from-blue-600/20 to-transparent blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
             
             {/* The visible floor/ring for 3D effect */}
-            <div className="absolute bottom-10 w-[250px] h-[60px] md:w-[350px] md:h-[80px] bg-blue-500/10 border border-blue-500/20 rounded-[100%] blur-sm shadow-[0_0_40px_rgba(59,130,246,0.2)]" />
+            <div className="absolute bottom-10 w-62.5 h-15 md:w-87.5 md:h-20 bg-blue-500/10 border border-blue-500/20 rounded-[100%] blur-sm shadow-[0_0_40px_rgba(59,130,246,0.2)]" />
 
            <motion.div
-  className="relative z-10 w-[280px] h-[380px] md:w-[320px] md:h-[420px] mx-auto group"
+  className="relative z-10 w-70 h-95 md:w-[320px] md:h-105 mx-auto group"
   whileHover={{ scale: 1.02 }}
   transition={{ type: "spring", stiffness: 300, damping: 20 }}
 >
   {/* The Aesthetic Frame */}
-  <div className="absolute inset-0 rounded-[2rem] border-2 border-white/20 bg-gradient-to-b from-white/10 to-transparent backdrop-blur-sm overflow-hidden shadow-2xl">
+  <div className="absolute inset-0 rounded-4xl border-2 border-white/20 bg-linear-to-b from-white/10 to-transparent backdrop-blur-sm overflow-hidden shadow-2xl">
     
     {/* Inner Glow/Highlight */}
-    <div className="absolute inset-0 border border-blue-400/30 rounded-[2rem] pointer-events-none" />
+    <div className="absolute inset-0 border border-blue-400/30 rounded-4xl pointer-events-none" />
 
     <Image
       src="/pfp1.png" 
@@ -109,7 +110,7 @@ export default function Hero() {
     />
     
     {/* Bottom Gradient Overlay to make the image blend with the frame */}
-    <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-60" />
+    <div className="absolute inset-0 bg-linear-to-t from-[#020617] via-transparent to-transparent opacity-60" />
   </div>
 
   {/* Decorative Corner Accents */}
@@ -127,7 +128,7 @@ export default function Hero() {
           onClick={scrollDown}
         >
           <span className="text-xs uppercase tracking-[0.3em] text-slate-500 group-hover:text-blue-400 transition-colors">Scroll</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-blue-500 to-transparent" />
+          <div className="w-px h-12 bg-linear-to-b from-blue-500 to-transparent" />
         </motion.div>
       </div>
     </section>

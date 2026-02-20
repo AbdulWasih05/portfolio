@@ -76,11 +76,11 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-6 left-0 right-0 z-[100] flex justify-center pointer-events-none">
+    <div className="fixed top-6 left-0 right-0 z-100 flex justify-center pointer-events-none">
       <motion.nav
         style={{ scale: navScale, padding: navPadding }}
         className={cn(
-          "pointer-events-auto relative flex items-center gap-2 rounded-full border shadow-2xl transition-all duration-500",
+          "pointer-events-auto relative flex items-center gap-4 rounded-full border shadow-2xl transition-all duration-500",
           "bg-blue-950/30 border-white/10 backdrop-blur-xl shadow-blue-900/20"
         )}
       >
